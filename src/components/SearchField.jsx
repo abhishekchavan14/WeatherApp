@@ -8,7 +8,7 @@ export default function SearchField({ setData }) {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `http://api.weatherapi.com/v1/current.json?key=57b917270de749448e461319241602&q=${searchCity}&aqi=no`
+          `https://api.weatherapi.com/v1/current.json?key=57b917270de749448e461319241602&q=${searchCity}&aqi=no`
         );
         const data = await response.json();
         setData(data);
@@ -26,7 +26,7 @@ export default function SearchField({ setData }) {
   const handleSearch = async () => {
     try {
       const response = await fetch(
-        `http://api.weatherapi.com/v1/current.json?key=57b917270de749448e461319241602&q=${searchCity}&aqi=no`
+        `https://api.weatherapi.com/v1/current.json?key=57b917270de749448e461319241602&q=${searchCity}&aqi=no`
       );
       if(!response.ok){
         return
